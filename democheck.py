@@ -63,7 +63,7 @@ def display_files_in_folder(folder_name, is_admin_page=False):
                 if delete_button:
                     os.remove(file_path)  # Immediately delete the file
                     st.success(f"File '{file}' has been deleted.")
-                    st.experimental_rerun()  # Trigger a rerun to update the view
+                    st.rerun()  # Trigger a rerun to update the view
 
             # Display download button for the file
             st.download_button(
