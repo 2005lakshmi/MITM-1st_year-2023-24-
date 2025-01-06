@@ -2,6 +2,8 @@
 import os
 import streamlit as st
 
+PASSWORD = st.secrets["general"]["password"]
+
 # Define the root directory where folders will be created
 ROOT_FOLDER = "uploaded_files"  # The root directory where folders will be created
 
@@ -114,11 +116,11 @@ def default_page():
     # Get list of folders in ROOT_FOLDER (which will be the previous papers)
     folder_list = get_folders()  # Get the list of folders created
     
-    # Option 1: Check if "lakshmiUI2" is entered in the search box to trigger Admin Page
+    # Option 1: 
     search_query = st.text_input("search folder here...",type="password")
     
-    if search_query.lower() == "lakshmiui2":
-        # If the user types "lakshmiUI2", automatically go to the Admin Page
+    if search_query.lower() == PASSWORD:
+        
         st.session_state.page = "Admin Page"
         st.rerun()  # Refresh to show Admin Page
         return  # Exit the function, no need to show folders anymore
