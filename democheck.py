@@ -151,7 +151,7 @@ def default_page():
         folder_to_display = None
 
     if folder_to_display:
-        st.write(f"**Viewing files in folder:** ***{folder_to_display}***")
+        st.write(f"**Viewing files in Subject:** ***{folder_to_display}***")
         display_files_in_folder(folder_to_display, is_admin_page=False)  # No delete on default page
     else:
         st.error("No previous papers available.")
