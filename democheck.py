@@ -122,6 +122,8 @@ def default_page():
     # Option 1: 
     search_query = st.text_input("search folder here...",type="password")
     
+    selected_folder_search = None
+
     if search_query.lower() == PASSWORD:
         
         st.session_state.page = "Admin Page"
