@@ -120,7 +120,7 @@ def default_page():
     folder_list = get_folders()  # Get the list of folders created
     
     # Option 1: 
-    search_query = st.text_input("search folder here...",type="password")
+    search_query = st.text_input("Search Subject Here...",type="password")
     
     selected_folder_search = None
 
