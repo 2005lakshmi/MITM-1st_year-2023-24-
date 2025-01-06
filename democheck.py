@@ -1,11 +1,14 @@
-
 import os
 import streamlit as st
 
-PASSWORD = st.secrets["general"]["password"]
+PASSWORD = st.secrets["general"]["password"]  # Password from secrets.toml
 
 # Define the root directory where folders will be created
 ROOT_FOLDER = "uploaded_files"  # The root directory where folders will be created
+
+# Ensure the ROOT_FOLDER exists
+if not os.path.exists(ROOT_FOLDER):
+    os.makedirs(ROOT_FOLDER)  # Create the ROOT_FOLDER if it doesn't exist
 
 # Function to create a folder
 def create_folder(folder_name):
@@ -165,4 +168,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
